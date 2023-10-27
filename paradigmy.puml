@@ -1,0 +1,19 @@
+@startuml
+title Парадигмы программирования
+
+rectangle "Структурное\nпрограммирование" as sp
+rectangle "Процедурное\nпрограммирование" as pp
+rectangle "Объектно-\nориентированное\nпрограммирование" as oop
+rectangle "Функциональное\nпрограммирование" as fp
+rectangle "Логическое\nпрограммирование" as lp
+rectangle "Реактивное\nпрограммирование" as rp
+rectangle "Декларативное\nпрограммирование" as dp
+
+sp --> pp
+pp --> oop
+oop --> fp
+fp --> lp
+lp --> rp
+dp --> fp
+
+@enduml
