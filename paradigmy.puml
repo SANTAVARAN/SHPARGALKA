@@ -1,19 +1,43 @@
 @startuml
-title Парадигмы программирования
 
-rectangle "Структурное\nпрограммирование" as sp
-rectangle "Процедурное\nпрограммирование" as pp
-rectangle "Объектно-\nориентированное\nпрограммирование" as oop
-rectangle "Функциональное\nпрограммирование" as fp
-rectangle "Логическое\nпрограммирование" as lp
-rectangle "Реактивное\nпрограммирование" as rp
-rectangle "Декларативное\nпрограммирование" as dp
+object ProgrammingParadigms
 
-sp --> pp
-pp --> oop
-oop --> fp
-fp --> lp
-lp --> rp
-dp --> fp
+object Imperative
+object Declarative
+
+object Procedural
+
+Procedural : exampleLang = "fortran"
+
+object ObjectOriented
+
+ObjectOriented : exampleLang = "java"
+
+object Structured
+
+Structured : exampleLang = "algol"
+
+object Logic
+
+Logic : exampleLang = "prolog"
+
+object Functional
+
+Functional : exampleLang = "haskel"
+
+object DataDriven
+
+DataDriven : exampleLang = "perl"
+
+Imperative <|-- ProgrammingParadigms
+Declarative <|-- ProgrammingParadigms
+
+Procedural <|-- Imperative
+ObjectOriented <|-- Imperative
+Structured <|-- Imperative
+
+Logic <|-- Declarative
+Functional <|-- Declarative
+DataDriven <|-- Declarative
 
 @enduml
